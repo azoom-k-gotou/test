@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "space_layout",
+  "info": {
+    "name": "SpaceLayout"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "space_id": {
+      "model": "space",
+      "via": "space_layouts"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "capacity": {
+      "type": "integer",
+      "required": true
+    },
+    "image": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

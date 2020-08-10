@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "host_user",
+  "info": {
+    "name": "HostUser"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "host_id": {
+      "model": "host",
+      "via": "host_users"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "unique": true,
+      "required": true
+    },
+    "password": {
+      "type": "password",
+      "required": true,
+      "private": true
+    }
+  }
+}

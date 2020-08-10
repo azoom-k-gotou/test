@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "opening_hour_type",
+  "info": {
+    "name": "OpeningHourType"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "host_id": {
+      "model": "host",
+      "via": "opening_hour_types"
+    },
+    "opening_hour": {
+      "type": "component",
+      "repeatable": true,
+      "component": "item.opening-hour",
+      "required": true
+    }
+  }
+}

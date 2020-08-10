@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/equipment-types",
+      "handler": "equipment-type.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/equipment-types/count",
+      "handler": "equipment-type.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/equipment-types/:id",
+      "handler": "equipment-type.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/equipment-types",
+      "handler": "equipment-type.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/equipment-types/:id",
+      "handler": "equipment-type.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/equipment-types/:id",
+      "handler": "equipment-type.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "equipment_type",
+  "info": {
+    "name": "EquipmentType"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "host_id": {
+      "model": "host",
+      "via": "equipment_types"
+    },
+    "spaces_equipment_types": {
+      "via": "equipment_type_id",
+      "collection": "spaces-equipment-types"
+    }
+  }
+}

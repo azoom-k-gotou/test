@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cancel-policy-items",
+      "handler": "cancel-policy-item.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cancel-policy-items/count",
+      "handler": "cancel-policy-item.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cancel-policy-items/:id",
+      "handler": "cancel-policy-item.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cancel-policy-items",
+      "handler": "cancel-policy-item.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cancel-policy-items/:id",
+      "handler": "cancel-policy-item.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cancel-policy-items/:id",
+      "handler": "cancel-policy-item.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

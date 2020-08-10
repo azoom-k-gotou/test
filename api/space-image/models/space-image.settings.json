@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "space_image",
+  "info": {
+    "name": "SpaceImage"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "space_id": {
+      "model": "space",
+      "via": "space_images"
+    },
+    "is_main": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "image": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

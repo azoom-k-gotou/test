@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "properties__stations",
+  "info": {
+    "name": "PropertiesStations"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "property_id": {
+      "model": "property"
+    },
+    "station_id": {
+      "model": "station",
+      "via": "properties_stations"
+    },
+    "walk_minutes": {
+      "required": true,
+      "type": "integer"
+    }
+  }
+}

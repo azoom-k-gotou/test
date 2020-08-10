@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cancel_policy_item",
+  "info": {
+    "name": "CancelPolicyItem"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "cancel_policy_id": {
+      "model": "cancel-policy",
+      "via": "cancel_policy_items"
+    },
+    "calc_type": {
+      "type": "integer",
+      "required": true
+    },
+    "rate": {
+      "type": "integer"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "day_limit": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "space",
+  "info": {
+    "name": "Space"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "property_id": {
+      "model": "property",
+      "via": "spaces"
+    },
+    "opening_hour_type_id": {
+      "model": "opening-hour-type"
+    },
+    "is_published": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "introduction": {
+      "type": "text"
+    },
+    "feature_comment": {
+      "type": "string"
+    },
+    "area": {
+      "type": "integer"
+    },
+    "height": {
+      "type": "integer"
+    },
+    "capacity": {
+      "type": "integer",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "usage_min_hours": {
+      "type": "integer"
+    },
+    "prohibited_matter": {
+      "type": "text"
+    },
+    "usage_terms": {
+      "type": "text"
+    },
+    "tags": {
+      "type": "json"
+    },
+    "spaces_cancel_policies": {
+      "via": "space_id",
+      "collection": "spaces-cancel-policies"
+    },
+    "space_images": {
+      "via": "space_id",
+      "collection": "space-image"
+    },
+    "space_layouts": {
+      "via": "space_id",
+      "collection": "space-layout"
+    },
+    "spaces_usages": {
+      "via": "space_id",
+      "collection": "spaces-usages"
+    },
+    "spaces_payment_methods": {
+      "via": "space_id",
+      "collection": "spaces-payment-methods"
+    },
+    "spaces_equipment_types": {
+      "via": "space_id",
+      "collection": "spaces-equipment-types"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "line",
+  "info": {
+    "name": "line"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "railway_company_id": {
+      "model": "railway-company"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

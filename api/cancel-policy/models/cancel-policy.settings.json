@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cancel_policy",
+  "info": {
+    "name": "CancelPolicy"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "host_id": {
+      "model": "host",
+      "via": "cancel_policies"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "cancel_policy_items": {
+      "via": "cancel_policy_id",
+      "collection": "cancel-policy-item"
+    }
+  }
+}

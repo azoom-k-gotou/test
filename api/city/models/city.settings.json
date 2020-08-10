@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "city",
+  "info": {
+    "name": "city"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "pref_id": {
+      "model": "pref"
+    },
+    "lat": {
+      "type": "decimal",
+      "unique": false,
+      "required": true
+    },
+    "lng": {
+      "type": "decimal",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "name_furigana": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

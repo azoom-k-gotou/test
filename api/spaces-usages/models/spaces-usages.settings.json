@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spaces__usages",
+  "info": {
+    "name": "SpacesUsages"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "space_id": {
+      "model": "space",
+      "via": "spaces_usages"
+    },
+    "usage_id": {
+      "model": "usage",
+      "via": "spaces_usages"
+    }
+  }
+}
