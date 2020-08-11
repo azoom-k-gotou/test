@@ -5,12 +5,12 @@ module.exports = ({ env }) => ({
       connector: 'bookshelf',
       settings: {
         client: 'mysql',
-        host: env('DATABASE_HOST', '127.0.0.1'),
-        port: env.int('DATABASE_PORT', 3306),
-        database: env('DATABASE_NAME', 'places'),
-        username: env('DATABASE_USERNAME', 'root'),
-        password: env('DATABASE_PASSWORD', ''),
-        ssl: env.bool('DATABASE_SSL', false),
+        host: env('MODE') === 'production' ? env('DB_HOST') : '127.0.0.1',
+        port: env('MODE') === 'production' ? env('DB_PORT') : 33088,
+        database: env('DB_NAME'),
+        username: env('DB_USER'),
+        password: env('DB_PASS'),
+        socketPath: env('MODE') === 'production' ? env('DB_SOCKET_PASS') : ''
       },
       options: {}
     },

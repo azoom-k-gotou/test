@@ -5,9 +5,12 @@
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
+    "dcc:up": "cd ./deployments/development && docker-compose up -d",
+    "dcc:down": "cd ./deployments/development && docker-compose down",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "deploy": "cd ./deployments/production && gcloud builds submit --tag gcr.io/azoom-k-gotou/places-strapi-app"
   },
   "devDependencies": {},
   "dependencies": {
