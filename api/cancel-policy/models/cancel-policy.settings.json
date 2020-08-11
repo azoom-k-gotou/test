@@ -17,9 +17,11 @@
       "type": "string",
       "required": true
     },
-    "cancel_policy_items": {
-      "via": "cancel_policy_id",
-      "collection": "cancel-policy-item"
+    "cancel_policy_item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "item.cancel-policy-item",
+      "required": true
     }
   }
 }

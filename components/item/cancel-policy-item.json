@@ -1,18 +1,11 @@
 {
-  "kind": "collectionType",
   "collectionName": "cancel_policy_item",
   "info": {
-    "name": "CancelPolicyItem"
+    "name": "CancelPolicyItem",
+    "icon": "apple-alt"
   },
-  "options": {
-    "increments": true,
-    "timestamps": true
-  },
+  "options": {},
   "attributes": {
-    "cancel_policy_id": {
-      "model": "cancel-policy",
-      "via": "cancel_policy_items"
-    },
     "calc_type": {
       "type": "integer",
       "required": true
@@ -24,8 +17,7 @@
       "type": "decimal"
     },
     "day_limit": {
-      "type": "integer",
-      "required": true
+      "type": "integer"
     }
   }
 }
