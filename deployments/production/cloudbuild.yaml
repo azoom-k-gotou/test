@@ -12,7 +12,7 @@ steps:
     args:
       - -c
       - |
-        gcloud run deploy ${_APP_NAME} \
+        gcloud beta run deploy ${_APP_NAME} \
           --platform managed \
           --region asia-northeast1 \
           --allow-unauthenticated \

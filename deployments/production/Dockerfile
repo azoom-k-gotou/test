@@ -12,10 +12,10 @@ COPY package*.json ./
 
 RUN yarn install
 
+RUN yarn build
+
 # Copy local code to the container image.
 COPY . ./
-
-RUN yarn build
 
 # Run the web service on container startup.
 CMD ["yarn", "start"]
