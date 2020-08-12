@@ -6,7 +6,7 @@
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": ["created_datetime", "updated_datetime"]
   },
   "attributes": {
     "lat": {

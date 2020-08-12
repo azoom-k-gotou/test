@@ -6,7 +6,10 @@
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": [
+      "created_datetime",
+      "updated_datetime"
+    ]
   },
   "attributes": {
     "pref_id": {
@@ -28,6 +31,10 @@
     "name_furigana": {
       "type": "string",
       "required": true
+    },
+    "regions": {
+      "via": "city_id",
+      "collection": "region"
     }
   }
 }

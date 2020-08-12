@@ -1,26 +1,24 @@
 {
   "kind": "collectionType",
-  "collectionName": "station",
+  "collectionName": "region",
   "info": {
-    "name": "Station"
+    "name": "Region"
   },
   "options": {
     "increments": true,
     "timestamps": ["created_datetime", "updated_datetime"]
   },
   "attributes": {
-    "line_id": {
-      "model": "line"
-    },
     "city_id": {
-      "model": "city"
+      "model": "city",
+      "via": "regions"
     },
     "lat": {
       "type": "decimal",
       "required": true
     },
     "lng": {
-      "type": "decimal",
+      "type": "biginteger",
       "required": true
     },
     "name": {
@@ -29,11 +27,7 @@
     },
     "name_furigana": {
       "type": "string",
-      "private": false
-    },
-    "properties_stations": {
-      "via": "station_id",
-      "collection": "properties-stations"
+      "required": true
     }
   }
 }
