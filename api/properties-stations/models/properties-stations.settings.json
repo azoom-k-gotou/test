@@ -6,15 +6,18 @@
   },
   "options": {
     "increments": true,
-    "timestamps": ["created_datetime", "updated_datetime"]
+    "timestamps": [
+      "created_datetime",
+      "updated_datetime"
+    ]
   },
   "attributes": {
     "property_id": {
       "model": "property"
     },
     "station_id": {
-      "model": "station",
-      "via": "properties_stations"
+      "via": "properties_stations",
+      "model": "station"
     },
     "walk_minutes": {
       "required": true,

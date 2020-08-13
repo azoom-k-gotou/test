@@ -18,11 +18,11 @@
     "lat": {
       "type": "decimal",
       "unique": false,
-      "required": true
+      "required": false
     },
     "lng": {
       "type": "decimal",
-      "required": true
+      "required": false
     },
     "name": {
       "type": "string",

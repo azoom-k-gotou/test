@@ -6,7 +6,10 @@
   },
   "options": {
     "increments": true,
-    "timestamps": ["created_datetime", "updated_datetime"]
+    "timestamps": [
+      "created_datetime",
+      "updated_datetime"
+    ]
   },
   "attributes": {
     "railway_company_id": {

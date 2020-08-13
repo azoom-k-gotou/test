@@ -6,7 +6,10 @@
   },
   "options": {
     "increments": true,
-    "timestamps": ["created_datetime", "updated_datetime"]
+    "timestamps": [
+      "created_datetime",
+      "updated_datetime"
+    ]
   },
   "attributes": {
     "line_id": {
@@ -17,11 +20,11 @@
     },
     "lat": {
       "type": "decimal",
-      "required": true
+      "required": false
     },
     "lng": {
       "type": "decimal",
-      "required": true
+      "required": false
     },
     "name": {
       "type": "string",
@@ -32,8 +35,8 @@
       "private": false
     },
     "properties_stations": {
-      "via": "station_id",
-      "collection": "properties-stations"
+      "collection": "properties-stations",
+      "via": "station_id"
     }
   }
 }

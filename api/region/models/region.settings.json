@@ -6,7 +6,10 @@
   },
   "options": {
     "increments": true,
-    "timestamps": ["created_datetime", "updated_datetime"]
+    "timestamps": [
+      "created_datetime",
+      "updated_datetime"
+    ]
   },
   "attributes": {
     "city_id": {
@@ -15,11 +18,11 @@
     },
     "lat": {
       "type": "decimal",
-      "required": true
+      "required": false
     },
     "lng": {
       "type": "biginteger",
-      "required": true
+      "required": false
     },
     "name": {
       "type": "string",
