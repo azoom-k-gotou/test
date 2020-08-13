@@ -72,6 +72,7 @@ $RECYCLE.BIN/
 *.sqlite3
 deployments/development/.data
 deployments/development/mysql/initdb
+!deployments/development/mysql-dump/places.sql
 
 
 ############################
