@@ -1,5 +1,13 @@
 const { sanitizeEntity } = require('strapi-utils')
 const camelcaseKeys = require('camelcase-keys')
+const { snake } = require('to-case')
+
+const underscore = obj => {
+  return Object.entries(obj).reduce((o, [key, value]) => {
+    o[snake(key)] = value
+    return o
+  }, {})
+}
 
 exports.camelizeColumns = collectionName => ({
   async find(ctx) {
@@ -17,7 +25,7 @@ exports.camelizeColumns = collectionName => ({
       const { data, files } = parseMultipartData(ctx);
       entity = await strapi.services[collectionName].update({ id: ctx.params.id }, data, { files });
     } else {
-      entity = await strapi.services[collectionName].update({ id: ctx.params.id }, ctx.request.body);
+      entity = await strapi.services[collectionName].update({ id: ctx.params.id }, underscore(ctx.request.body));
     }
     return camelcaseKeys(sanitizeEntity(entity, { model: strapi.models[collectionName] }), { deep: true })
   },
@@ -27,7 +35,7 @@ exports.camelizeColumns = collectionName => ({
       const { data, files } = parseMultipartData(ctx);
       entity = await strapi.services[collectionName].create(data, { files });
     } else {
-      entity = await strapi.services[collectionName].create(ctx.request.body);
+      entity = await strapi.services[collectionName].create(underscore(ctx.request.body));
     }
     return camelcaseKeys(sanitizeEntity(entity, { model: strapi.models[collectionName] }), { deep: true })
   },
