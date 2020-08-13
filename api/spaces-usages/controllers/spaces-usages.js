@@ -1,3 +1,3 @@
 const { camelizeColumns } = require('../../../util')
 
-module.exports = { ...camelizeColumns('spaces__usages') };
+module.exports = { ...camelizeColumns('spaces-usages') };

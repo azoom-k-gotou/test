@@ -1,3 +1,3 @@
 const { camelizeColumns } = require('../../../util')
 
-module.exports = { ...camelizeColumns('cancel_policy') };
+module.exports = { ...camelizeColumns('cancel-policy') };

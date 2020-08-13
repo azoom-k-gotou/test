@@ -1,3 +1,3 @@
 const { camelizeColumns } = require('../../../util')
 
-module.exports = { ...camelizeColumns('payment_method') };
+module.exports = { ...camelizeColumns('payment-method') };

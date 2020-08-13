@@ -1,3 +1,3 @@
 const { camelizeColumns } = require('../../../util')
 
-module.exports = { ...camelizeColumns('equipment_type') };
+module.exports = { ...camelizeColumns('equipment-type') };
