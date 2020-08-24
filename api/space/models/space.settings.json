@@ -6,7 +6,10 @@
   },
   "options": {
     "increments": true,
-    "timestamps": ["created_datetime", "updated_datetime"]
+    "timestamps": [
+      "created_datetime",
+      "updated_datetime"
+    ]
   },
   "attributes": {
     "property_id": {
@@ -61,14 +64,6 @@
       "via": "space_id",
       "collection": "spaces-cancel-policies"
     },
-    "space_images": {
-      "via": "space_id",
-      "collection": "space-image"
-    },
-    "space_layouts": {
-      "via": "space_id",
-      "collection": "space-layout"
-    },
     "spaces_usages": {
       "via": "space_id",
       "collection": "spaces-usages"
@@ -80,6 +75,14 @@
     "spaces_equipment_types": {
       "via": "space_id",
       "collection": "spaces-equipment-types"
+    },
+    "space_layouts": {
+      "via": "space_id",
+      "collection": "space-layout"
+    },
+    "space_images": {
+      "via": "space_id",
+      "collection": "space-image"
     }
   }
 }
