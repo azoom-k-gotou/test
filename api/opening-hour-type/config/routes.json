@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/opening-hour-types",
+      "handler": "opening-hour-type.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/opening-hour-types/count",
+      "handler": "opening-hour-type.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/opening-hour-types/:id",
+      "handler": "opening-hour-type.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/opening-hour-types",
+      "handler": "opening-hour-type.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/opening-hour-types/:id",
+      "handler": "opening-hour-type.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/opening-hour-types/:id",
+      "handler": "opening-hour-type.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

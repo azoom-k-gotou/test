@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usage",
+  "info": {
+    "name": "Usage"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": ["created_datetime", "updated_datetime"]
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "spaces_usages": {
+      "via": "usage_id",
+      "collection": "spaces-usages"
+    }
+  }
+}

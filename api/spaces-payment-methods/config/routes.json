@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/spaces-payment-methods",
+      "handler": "spaces-payment-methods.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/spaces-payment-methods/count",
+      "handler": "spaces-payment-methods.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/spaces-payment-methods/:id",
+      "handler": "spaces-payment-methods.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/spaces-payment-methods",
+      "handler": "spaces-payment-methods.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/spaces-payment-methods/:id",
+      "handler": "spaces-payment-methods.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/spaces-payment-methods/:id",
+      "handler": "spaces-payment-methods.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

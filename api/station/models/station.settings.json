@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "station",
+  "info": {
+    "name": "Station"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_datetime",
+      "updated_datetime"
+    ]
+  },
+  "attributes": {
+    "line_id": {
+      "model": "line"
+    },
+    "city_id": {
+      "model": "city"
+    },
+    "lat": {
+      "type": "decimal",
+      "required": false
+    },
+    "lng": {
+      "type": "decimal",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "name_furigana": {
+      "type": "string",
+      "private": false
+    },
+    "properties_stations": {
+      "collection": "properties-stations",
+      "via": "station_id"
+    }
+  }
+}

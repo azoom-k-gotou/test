@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "space_layout",
+  "info": {
+    "name": "SpaceLayout"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_datetime",
+      "updated_datetime"
+    ]
+  },
+  "attributes": {
+    "space_id": {
+      "model": "space",
+      "via": "space_layouts"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "capacity": {
+      "type": "integer",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

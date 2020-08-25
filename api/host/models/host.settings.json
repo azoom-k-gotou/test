@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "host",
+  "info": {
+    "name": "Host"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": ["created_datetime", "updated_datetime"]
+  },
+  "attributes": {
+    "legal_entiry": {
+      "type": "integer",
+      "required": true
+    },
+    "company_name": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "string",
+      "maxLength": 7,
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "tel": {
+      "type": "string",
+      "maxLength": 11,
+      "required": true
+    },
+    "equipment_types": {
+      "via": "host_id",
+      "collection": "equipment-type"
+    },
+    "properties": {
+      "via": "host_id",
+      "collection": "property"
+    },
+    "cancel_policies": {
+      "via": "host_id",
+      "collection": "cancel-policy"
+    },
+    "host_users": {
+      "via": "host_id",
+      "collection": "host-user"
+    },
+    "opening_hour_types": {
+      "via": "host_id",
+      "collection": "opening-hour-type"
+    }
+  }
+}

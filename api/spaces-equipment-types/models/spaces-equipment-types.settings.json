@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spaces__equipment_types",
+  "info": {
+    "name": "SpacesEquipmentTypes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": ["created_datetime", "updated_datetime"]
+  },
+  "attributes": {
+    "space_id": {
+      "model": "space",
+      "via": "spaces_equipment_types"
+    },
+    "equipment_type_id": {
+      "model": "equipment-type",
+      "via": "spaces_equipment_types"
+    },
+    "amount": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}

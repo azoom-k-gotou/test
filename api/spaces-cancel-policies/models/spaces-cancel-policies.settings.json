@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spaces__cancel_policies",
+  "info": {
+    "name": "SpacesCancelPolicies"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": ["created_datetime", "updated_datetime"]
+  },
+  "attributes": {
+    "space_id": {
+      "model": "space",
+      "via": "spaces_cancel_policies"
+    },
+    "cancel_policy_id": {
+      "model": "cancel-policy"
+    }
+  }
+}

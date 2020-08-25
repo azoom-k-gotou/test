@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "railway_company",
+  "info": {
+    "name": "RailwayCompany"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": ["created_datetime", "updated_datetime"]
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

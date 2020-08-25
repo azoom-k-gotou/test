@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "city",
+  "info": {
+    "name": "city"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_datetime",
+      "updated_datetime"
+    ]
+  },
+  "attributes": {
+    "pref_id": {
+      "model": "pref"
+    },
+    "lat": {
+      "type": "decimal",
+      "unique": false,
+      "required": false
+    },
+    "lng": {
+      "type": "decimal",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "name_furigana": {
+      "type": "string",
+      "required": true
+    },
+    "regions": {
+      "via": "city_id",
+      "collection": "region"
+    }
+  }
+}

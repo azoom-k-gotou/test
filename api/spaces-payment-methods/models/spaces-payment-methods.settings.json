@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spaces__payment_methods",
+  "info": {
+    "name": "SpacesPaymentMethods"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": ["created_datetime", "updated_datetime"]
+  },
+  "attributes": {
+    "space_id": {
+      "model": "space",
+      "via": "spaces_payment_methods"
+    },
+    "payment_method_id": {
+      "model": "payment-method",
+      "via": "spaces_payment_methods"
+    }
+  }
+}

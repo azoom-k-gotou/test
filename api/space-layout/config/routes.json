@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/space-layouts",
+      "handler": "space-layout.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/space-layouts/count",
+      "handler": "space-layout.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/space-layouts/:id",
+      "handler": "space-layout.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/space-layouts",
+      "handler": "space-layout.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/space-layouts/:id",
+      "handler": "space-layout.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/space-layouts/:id",
+      "handler": "space-layout.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

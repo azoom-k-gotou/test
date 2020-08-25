@@ -1,0 +1,14 @@
+version: "3"
+services:
+  places-strapi-mysql:
+    image: mysql:5.7
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_general_ci
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: places
+    volumes:
+      - ./.data/mysql:/var/lib/mysql
+      - ./.data/mysql-dump:/var/backups
+      - ./mysql/initdb:/docker-entrypoint-initdb.d
+    ports:
+      - 33088:3306

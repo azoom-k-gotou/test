@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/properties-equipment-types",
+      "handler": "properties-equipment-types.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/properties-equipment-types/count",
+      "handler": "properties-equipment-types.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/properties-equipment-types/:id",
+      "handler": "properties-equipment-types.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/properties-equipment-types",
+      "handler": "properties-equipment-types.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/properties-equipment-types/:id",
+      "handler": "properties-equipment-types.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/properties-equipment-types/:id",
+      "handler": "properties-equipment-types.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

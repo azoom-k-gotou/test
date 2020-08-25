@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pref",
+  "info": {
+    "name": "pref"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_datetime",
+      "updated_datetime"
+    ]
+  },
+  "attributes": {
+    "lat": {
+      "type": "decimal",
+      "required": false
+    },
+    "lng": {
+      "type": "decimal",
+      "required": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "name_furigana": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

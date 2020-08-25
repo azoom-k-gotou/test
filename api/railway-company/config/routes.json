@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/railway-companies",
+      "handler": "railway-company.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/railway-companies/count",
+      "handler": "railway-company.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/railway-companies/:id",
+      "handler": "railway-company.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/railway-companies",
+      "handler": "railway-company.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/railway-companies/:id",
+      "handler": "railway-company.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/railway-companies/:id",
+      "handler": "railway-company.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

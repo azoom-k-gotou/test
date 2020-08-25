@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "properties__equipment_types",
+  "info": {
+    "name": "PropertiesEquipmentTypes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": ["created_datetime", "updated_datetime"]
+  },
+  "attributes": {
+    "property_id": {
+      "model": "property",
+      "via": "properties_equipment_types"
+    },
+    "equipment_type_id": {
+      "model": "equipment-type"
+    },
+    "amount": {
+      "type": "decimal",
+      "required": true
+    },
+    "total_num": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

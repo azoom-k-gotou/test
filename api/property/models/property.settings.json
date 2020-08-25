@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "property",
+  "info": {
+    "name": "Property"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": ["created_datetime", "updated_datetime"]
+  },
+  "attributes": {
+    "host_id": {
+      "model": "host",
+      "via": "properties"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "zip": {
+      "type": "string",
+      "required": true,
+      "maxLength": 7
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "tel": {
+      "type": "string",
+      "required": true,
+      "maxLength": 11
+    },
+    "direction": {
+      "type": "text"
+    },
+    "spaces": {
+      "via": "property_id",
+      "collection": "space"
+    },
+    "properties_equipment_types": {
+      "via": "property_id",
+      "collection": "properties-equipment-types"
+    }
+  }
+}

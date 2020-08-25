@@ -1,0 +1,32 @@
+{
+  "collectionName": "opening_hour_type_item",
+  "info": {
+    "name": "OpeningHour",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "day": {
+      "type": "enumeration",
+      "enum": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun",
+        "hol"
+      ],
+      "required": true
+    },
+    "start": {
+      "type": "time",
+      "required": true
+    },
+    "end": {
+      "type": "time",
+      "required": true
+    }
+  }
+}

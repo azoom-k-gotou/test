@@ -1,0 +1,23 @@
+{
+  "collectionName": "cancel_policy_item",
+  "info": {
+    "name": "CancelPolicyItem",
+    "icon": "apple-alt"
+  },
+  "options": {},
+  "attributes": {
+    "calc_type": {
+      "type": "integer",
+      "required": true
+    },
+    "rate": {
+      "type": "integer"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "day_limit": {
+      "type": "integer"
+    }
+  }
+}
